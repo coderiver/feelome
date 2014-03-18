@@ -55,9 +55,10 @@ $fc: #434a54
 $link: #3bafda
 $red: #ed5565
 $org: #fc6e51
+$bg: #e6e9ed
 	
 body
-	background: #E6E9ED 
+	background: $bg 
 	+reg
 	font-size: 12px 
 	line-height: 1.4
@@ -69,6 +70,7 @@ input, textarea, button
 	+reg
 	+box
 	font-size: 12px
+	color: $fc 
 button
 	background: none 
 
@@ -78,69 +80,44 @@ button
 	margin: 0 auto
 
 
-.topper
-	position: absolute
-	top: 0
-	left: 0
-	right: 0
-	height: 48px
-	padding-left: 20px
-	background: #FFF 
-	border-bottom: #CCC 2px solid 
-	+clr
-.topper__right
-	float: right
-	a
-		float: left
-		width: auto
-		height: 48px
-		+med
-		line-height: 48px
-		color: #fff 
-		font-size: 12px
-		text-transform: none
-	.topper__enter
-		padding: 0 30px 
-		border-left: #E6E9ED 1px solid
-		color: $bl 
-.topper__fb
-	.ico-fb
-		margin-left: 10px
-.ico-fb
-	position: relative
-	top: 3px
-	display: inline-block
-	+s(enter-fb)
 .logo
 	float: left
-	height: 48px
+	height: 50px
 	+font
 	font-size: 30px
 	color: #656d78
-	line-height: 48px 
+	line-height: 50px 
 	letter-spacing: -1px 
+	
+
 .logo-circle
 	display: inline-block
 	+s(logo-circle)
 
 
 
-.btn-blue, .btn-dark-blue
+.btn
 	width: 100%
-	height: 48px
+	height: 50px
 	padding: 0 15px
 	border-bottom: 2px solid
+	background: $bl 
+	border-color: $bl-b
+	+box
 	line-height: 48px
 	text-align: center
 	font-size: 20px
 	color: #FFF
 	text-transform: uppercase
-.btn-blue
-	background: $bl 
-	border-color: $bl-b
-.btn-dark-blue
+.btn_fb
 	background: $bld 
 	border-color: $bld-b
+.btn_small
+	height: 40px
+	line-height: 38px
+.btn_orange
+	background: #fc6e51
+	border-color: #ca5841 
 	
 
 
@@ -155,9 +132,9 @@ button
 	ul, li
 		float: left
 	li
-		padding-left: 30px
+		margin-left: 30px
 		&:first-child
-			padding: 0
+			margin: 0
 	a
 		display: block
 		color: #AAB2BD 
@@ -179,61 +156,86 @@ button
 
 
 .header
+	position: relative
 	height: 50px
-	background: #FFF
-	border-bottom: 1px solid #e6e9ed  
+	padding-bottom: 90px
+	margin-bottom: 20px
 	.l-center
 		+clr
 	.logo
 		margin-right: 35px 
 	.links
 		margin-top: 15px
-.search-form
-	float: left
-	width: 240px
-	margin-top: 10px
-	label
-		position: relative
-		display: block
-	input
-		width: 100%
-		height: 30px 
-		padding: 0 15px 0 30px
-		background: #e6e9ed
-		border-radius: 15px  
-		+placeholder-color($fc)
-	i
-		position: absolute
-		top: 7px
-		left: 10px
-		+s(search)
-
-
-.user
-	float: right
-	margin: 5px 0 0 25px 
-	img, i
-		display: inline-block
-		vertical-align: middle
-	img
-		border-radius: 50%
-	i
-		margin-left: 6px
-		+arr(10,6,#656d78,b)
+	&.is-fixed
+		padding-bottom: 0px
+		z-index: 200 
+		.header__in
+			position: fixed
+			top: 0
+			left: 0
+			right: 0
+		.nav
+			position: relative
+			left: auto
+			right: auto
+			top: auto
+			float: right
+			margin-left: 30px
+			border: none
+			.l-center
+				width: 400px
+			li
+				&.is-active
+					a
+						&:after
+							bottom: -1px
+			a
+				height: 50px
+				line-height: 50px
+			i
+				top: 8px
+				margin: 0
+			span
+				display: none
+			strong
+				position: absolute
+				top: 7px
+				right: 8px
+				width: 4px
+				height: 4px
+		.links
+			li
+				margin-left: 25px
+				&:first-child
+					margin: 0
+			span
+				display: none
+			i
+				margin: 0
+		.user
+			margin: 5px 0 0 10px
+.header__in
+	background: #FFF 	
+	border-bottom: 1px solid $bg 			
 
 
 .nav
-	margin-bottom: 20px
+	position: absolute
+	top: 50px
+	left: 0
+	right: 0 
 	background: #FFF
+	border-top: 1px solid $bg 
 	font-size: 0
 	li
+		position: relative
 		display: inline-block
 		width: 25%
-		border-right: 1px solid #e6e9ed 
+		border-right: 1px solid $bg 
 		vertical-align: top
 		+box
 		&:first-child
-			border-left: 1px solid #E6E9ED 
+			border-left: 1px solid $bg 
 		&.is-active	
 			a
 				&:after
@@ -248,27 +250,31 @@ button
 		position: relative
 		display: block
 		height: 90px
-		line-height: 90px
+		line-height: 86px
 		text-align: center
 		font-size: 16px
 		color: $fc 
 	i, span, strong
 		display: inline-block
-		vertical-align: middle
+		vertical-align: top
 	i
+		position: relative
+		top: 28px
 		margin-right: 10px 
-	strong, span
-		line-height: 30px
 	strong
+		position: relative
+		top: 29px
 		width: 30px
 		height: 30px
 		margin-left: 10px
 		background: $red 
 		border-radius: 50%
 		+med
+		line-height: 30px
 		font-size: 12px
 		text-align: center
 		color: #FFF 
+		overflow: hidden
 .nav__ico-1
 	+s(nav-ico1)
 .nav__ico-2
@@ -279,7 +285,120 @@ button
 	+s(nav-ico4)
 
 
+.user
+	position: relative
+	float: right
+	margin: 5px 0 0 25px 
+.user__head
+	cursor: pointer
+	font-size: 0
+	img, i
+		display: inline-block
+		vertical-align: middle
+	img
+		border-radius: 50%
+	i
+		margin-left: 6px
+		+arr(10,6,#656d78,b)
+.user__dropdown
+	position: absolute
+	top: 50px
+	right: 0
+	width: 300px
+	background: #FFF
+	box-shadow: 0 10px 100px #656d77
+	border-radius: 4px 
+	z-index: 10 
+	&:before
+		content: ""
+		position: absolute
+		top: -10px
+		right: 25px
+		+arr(20,10,#fff,t)
+.user__data
+	padding: 15px
+	+clr
+.user__info
+	display: table
+	padding-top: 25px
+.user__name
+	margin-bottom: 3px
+	font-size: 16px
+.user__stats
+	border: 1px solid $bg
+	border-width: 1px 0
+	font-size: 0
+	li
+		display: inline-block
+		width: 33.3%
+		padding: 15px 0
+		border-left: 1px solid $bg 
+		+box
+		vertical-align: top
+		text-align: center
+		font-size: 10px
+		&:first-child
+			width: 33.4%
+			border: none
+	span
+		display: block
+		font-size: 30px
+		line-height: 1.2
+.user__actions
+	padding: 15px 20px
+	+clr
+.user__setting, .user__out
+	i, span
+		display: inline-block
+		vertical-align: middle
+	i
+		margin-right: 8px
+.user__setting
+	float: left
+	i
+		+s(user-setting)
+.user__out
+	float: right
+	color: #AAB2BD 
+	i
+		+s(user-out)
 
+
+.search-form
+	float: left
+	width: 240px
+	margin-top: 10px
+	label
+		position: relative
+		display: block
+	input
+		width: 100%
+		height: 30px 
+		padding: 0 15px 0 30px
+		background: $bg
+		border-radius: 15px  
+		+placeholder-color($fc)
+	i
+		position: absolute
+		top: 7px
+		left: 10px
+		+s(search)
+
+
+.ico-fb
+	position: relative
+	top: 3px
+	display: inline-block
+	+s(enter-fb)
+.ico-quote
+	+s(quote)
+.ico-ribbon-white
+	+s(ribbon-white)
+
+.warning
+	+s(warning)
+.like
+	+s(like)
 
 
 

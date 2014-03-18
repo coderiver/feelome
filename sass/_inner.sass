@@ -1,9 +1,389 @@
 // Normally inner page styles
 .add-task
-	.btn-blue
+	> .btn
 		border-radius: 4px 4px 0 0 
-		
+.add-task__in
+	padding: 15px 15px 20px
+	background: #656d78 
+	text-align: center
+	.btn
+		width: auto
+		padding: 0 55px
+		border-radius: 4px
+		font-size: 11px 
+.add-task__text
+	margin-bottom: 15px
+	font-size: 14px
+	color: #fff 
+.add-task__me
+	margin-bottom: 20px
+	+clr
+	.btn
+		float: left
+		width: 300px
+		border-radius: 0 4px 4px 0
+		font-size: 11px
+.add-task__stats
+	float: left
+	width: 700px
+	height: 50px
+	padding: 0 20px
+	background: #FFF
+	border-radius: 4px 0 0 4px
+	border-bottom: 2px solid #ccc  
+	line-height: 48px
+	+box
+	font-size: 16px
+	a
+		color: #ED5565 
+
+
+
+
+.user-pic
+	position: relative
+	float: left
+	width: 60px
+	height: 60px
+	border-radius: 50%
+	background: url(../img/icons/user-pic.png) no-repeat 50% 50% #aab2bd 
+	-webkit-background-size: 50% 50% 
+	-o-background-size: 50% 50% 
+	background-size: 50% 50% 
+	margin-right: 15px
+	img
+		display: block
+		border-radius: 50%	
+	span
+		position: absolute
+		top: -4px
+		right: -4px
+		padding: 2px 5px
+		border: 1px solid #e9573f
+		border-radius: 2px
+		background: $org
+		color: #fff 
+		+med 	
+		&.is-empty
+			background: #aab2bd
+			border-color: #878f9a
+.user-pic_middle
+	width: 50px
+	height: 50px
+.user-pic_small
+	width: 30px
+	height: 30px
+.user-pic_big
+	width: 90px
+	height: 90px
+	span
+		top: 0
+		right: 0
+	
 
 .tasks
-	padding: 15px
+	padding: 15px 20px 15px 15px
 	background: #FFF 
+.tasks__item
+	margin-bottom: 15px
+	+clr	
+	&.is-completed
+		.tasks__top
+			background: #DA4453
+		.tasks__arr
+			border-color: transparent #DA4453 transparent transparent
+.tasks__in
+	float: right
+	width: 570px 
+	padding-top: 5px
+.tasks__top
+	position: relative
+	padding: 10px 10px 10px 20px
+	border-radius: 4px 4px 0 0 
+	background: $fc
+	+clr
+.tasks__arr
+	content: ""
+	position: absolute
+	top: 17px
+	left: -9px
+	+arr(9,18,$fc,l) 
+.tasks__user
+	float: left
+	padding: 7px 0 
+	font-size: 14px
+	+med
+	a
+		color: #FFF 
+.tasks__winner
+	float: right
+	font-size: 0
+	.ico-ribbon-white, a, .user-pic
+		display: inline-block
+		vertical-align: middle
+	.ico-ribbon-white, a
+		margin-right: 10px
+	.user-pic
+		float: none
+		margin: 0
+	a
+		+med
+		font-size: 14px
+		color: #FFF 
+.tasks__container
+	position: relative
+.tasks__pic
+	img
+		display: block
+.tasks__title
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	padding: 15px 20px 15px 60px
+	+g(rgba(0,0,0,.7), rgba(0,0,0,0))
+	font-size: 16px 		
+	color: #FFF 
+	.ico-quote
+		position: absolute
+		top: 18px
+		left: 22px
+.tasks__action
+	position: absolute
+	left: 0
+	right: 0
+	bottom: 0
+	padding: 15px
+	+g(rgba(0,0,0,0), rgba(0,0,0,.7))
+	text-align: right
+	font-size: 0
+	button
+		margin-left: 20px
+.tasks__down
+	border: 1px solid $bg
+	border-radius: 0 0 4px 4px
+.tasks__down-in
+	padding: 10px 20px
+	+clr
+.tasks__time
+	float: left
+	margin-right: 30px
+.tasks__comment-go	
+	float: left
+.tasks__comment-counter
+	float: right
+	
+
+.add-comment
+	display: none
+	padding: 10px 13px 10px 10px
+	border-top: 1px solid $bg 
+	+clr
+	.user-pic
+		margin-right: 10px
+.add-comment__in	
+	float: right
+	width: 485px 
+	padding-top: 5px
+.add-comment__form
+	+clr
+	.btn
+		float: left
+		width: 110px
+		border-radius: 0 4px 4px 0
+		font-size: 11px	
+.add-comment__field
+	position: relative
+	float: left
+	width: 375px
+	input
+		width: 100%
+		height: 40px 
+		padding: 0 15px
+		background: $bg
+		border-radius: 4px 0 0 4px 
+		font-size: 14px
+	&:after
+		content: ""
+		position: absolute
+		top: 14px
+		left: -6px
+		+arr(6,12,$bg,l)
+.add-comment__symbols
+	padding-top: 10px
+	font-style: italic
+	font-size: 11px
+	color: #aab2bd 
+
+
+.tabs__nav
+	font-size: 0
+	button
+		width: 50%
+		height: 50px
+		border-radius: 0 4px 0 0
+		background: #fff 
+		border-bottom: 2px solid #d4d8de
+		line-height: 48px
+		vertical-align: top
+		+med
+		font-size: 11px
+		text-transform: uppercase
+		&:first-child
+			border-radius: 4px 0 0 0
+		&.is-active
+			background: #656d78
+			border-color: #656d78
+			color: #FFF  
+
+
+.task
+	+clr
+.task__in
+	position: relative
+	float: left
+	width: 190px
+	margin-top: 5px
+	&:hover
+		.task__user, .task__comment
+			display: block
+.task__pic
+	img
+		display: block
+		border-radius: 4px
+.task__user
+	display: none
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	padding: 7px 10px 35px 
+	border-radius: 4px 4px 0 0
+	+g(rgba(0,0,0,.7), rgba(0,0,0,0))
+	color: #FFF 
+.task__comment
+	display: none
+	position: absolute
+	left: 0
+	right: 0
+	bottom: 0
+	padding: 35px 10px 7px 
+	border-radius: 0 0 4px 4px
+	+g(rgba(0,0,0,0), rgba(0,0,0,.7))
+	color: #FFF 
+	i, span
+		display: inline-block
+		vertical-align: middle
+	i
+		position: relative
+		top: 1px
+		margin-right: 5px 
+		+s(comment)
+
+
+.popular
+	.task
+		padding: 15px 15px 20px
+		background: #f9f9fa 
+		border-bottom: 1px solid $bg 
+		&:last-child
+			border-radius: 0 0 4px 4px
+		&:hover
+			background: #FFF 
+
+
+.tasks-grid
+	padding: 15px
+	background: #FFF
+	font-size: 0
+	.task
+		display: inline-block
+		margin-bottom: 35px
+		vertical-align: top 
+		font-size: 12px
+		&:nth-child(2n)
+			margin-left: 35px
+	.task__in	
+		width: 230px
+
+
+
+.expert__item
+	position: relative
+	display: block 
+	padding-left: 15px 
+	background: #F4F5F7 
+	box-shadow: 0 -1px 0 rgba(0,0,0,.07)
+	font-size: 0 
+	color: $fc 
+	&:first-child
+
+	&:last-child
+		border-radius: 0 0 4px 4px
+		.expert__counter
+			border-radius: 0 0 4px 0
+	&:hover
+		background: #fff 
+		.expert__counter
+			background: #FC7D63 
+	.user-pic, .expert__name, .expert__counter
+		display: inline-block
+		vertical-align: middle
+		font-size: 12px
+	.user-pic
+		float: none
+.expert__name
+	width: 125px
+	margin-right: 15px
+	font-size: 14px
+.expert__counter
+	display: inline-block
+	width: 68px 
+	height: 90px
+	background: #FC6E51 
+	border-left: 2px solid #ca5841
+	box-shadow: 0 1px 0 rgba(0,0,0,.1)
+	line-height: 90px
+	vertical-align: middle
+	text-align: center
+	+med
+	font-size: 16px
+	color: #FFF 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
