@@ -2,6 +2,8 @@
 .add-task
 	> .btn
 		border-radius: 4px 4px 0 0 
+	& + .tasks
+		border-radius: 0 0 4px 4px
 .add-task__in
 	padding: 15px 15px 20px
 	background: #656d78 
@@ -83,6 +85,7 @@
 
 .tasks
 	padding: 15px 20px 15px 15px
+	border-radius: 4px
 	background: #FFF 
 .tasks__item
 	margin-bottom: 15px
@@ -175,27 +178,30 @@
 	
 
 .add-comment
+	position: relative
 	display: none
-	padding: 10px 13px 10px 10px
+	padding: 10px 15px 10px 70px
 	border-top: 1px solid $bg 
 	+clr
 	.user-pic
-		margin-right: 10px
+		position: absolute
+		top: 10px
+		left: 10px
+		margin: 0
 .add-comment__in	
-	float: right
-	width: 485px 
 	padding-top: 5px
 .add-comment__form
-	+clr
+	position: relative
+	padding-right: 110px
 	.btn
-		float: left
+		position: absolute
+		top: 0
+		right: 0
 		width: 110px
 		border-radius: 0 4px 4px 0
 		font-size: 11px	
 .add-comment__field
 	position: relative
-	float: left
-	width: 375px
 	input
 		width: 100%
 		height: 40px 
@@ -354,20 +360,575 @@
 
 
 
+.my__item
+	position: relative
+	margin-bottom: 20px 
+	&.is-closed
+		.my__top	
+			padding: 15px
+			background: #da4453 
+.my__in
+	position: relative
+	width: 700px
+.my__pic
+	img
+		display: block
+		border-radius: 4px 0 0 4px
+.my__top
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	border-radius: 4px 0 0 0
+	padding: 15px 90px 15px 15px
+	+g(rgba(0,0,0,.7), rgba(0,0,0,0))
+.my__top-user
+	float: left
+	.user-pic, .my__title
+		float: none
+		display: inline-block
+		vertical-align: middle
+.my__winner
+	float: right
+	i, .user-pic, a
+		display: inline-block
+		vertical-align: middle
+	i, a
+		margin-right: 8px 
+	a
+		+med
+		font-size: 14px
+		color: #FFF 
+	.user-pic
+		float: none
+		margin: 0
+.my__title
+	font-size: 16px
+	color: #FFF 
+.my__action
+	position: absolute
+	top: 15px
+	right: 15px
+	font-size: 0
+	button
+		margin-left: 20px
+.my__comment-stats
+	position: absolute
+	top: 0
+	right: 0
+	width: 300px
+	height: 50px
+	padding: 15px
+	border-radius: 0 4px 0 0 
+	border-bottom: #D4D8DE 2px solid 
+	background: #FFF 
+	+box
+	a
+		+med
+		color: #ED5565 
+	i
+		display: inline-block
+		margin-right: 10px
+		+s(comment-black)
+		vertical-align: middle
+	.fullscreen
+		position: absolute
+		top: 15px
+		right: 15px
+.my__btn-comment
+	position: absolute
+	bottom: 0
+	right: 0
+	width: 300px
+	.btn
+		border: 2px solid $bl-b
+		border-width: 2px 0 0 0
+		border-radius: 0 0 4px 
+		font-size: 11px
+.my__comments
+	position: absolute
+	top: 50px
+	right: 0
+	bottom: 50px
+	width: 300px
+	background: #FFF 
+	overflow: auto
+.my_popup
+	.my__pic
+		img
+			border-radius: 0
+	.my__in
+		width: auto
+	.my__comment-stats, .my__comments
+		position: relative
+		top: auto
+		right: auto
+		bottom: auto
+		width: auto
+	.my__comment-wrap
+		+clr
+		.my__comment-stats, .btn
+			float: left
+			width: 50%
+		.btn
+			font-size: 11px
+.no-fullscreen
+	padding: 10px 0
+	border-top: 1px solid $bg 
+	text-align: center
+	i, span, a
+		display: inline-block
+		vertical-align: middle
+	i
+		margin-right: 5px
+	span
+		color: #AAB2BD 
+
+
+
+.comment__item
+	padding: 10px
+	border-top: #E6E9ED 1px solid 
+	&:first-child
+		border: none
+	.user-pic
+		margin-right: 10px
+.comment__in
+	padding-top: 5px
+	overflow: hidden
+.comment__top
+	margin-bottom: 10px
+	+clr
+.comment__time
+	float: right
+	margin: 3px 0 0 10px
+	font-size: 11px
+.comment__name
+	font-size: 14px
+	color: #434A54
+	a
+		color: #434A54
+.comment__text
+	margin-bottom: 10px
+.comment__down
+	+clr
+.comment__link
+	float: left
+	& + .comment__link
+		margin-left: 30px
+.comment__true
+	float: right
+	color: #ed5565 
+	i, span
+		display: inline-block
+		vertical-align: middle
+	i
+		+s(ribbon-red)
+	span
+		margin-left: 8px
+.comment__item_reply
+	padding: 10px 10px 10px 30px
+	background: #f9f9fa 
+.comment__correct
+	background: #da4453
+	color: #fff 
+	.comment__name
+		color: #fff
+		a
+			color: #fff
+	.comment__link
+		color: #FFF 
+	.comment__true
+		i
+			+s(ribbon-white)
+
+
+
+.tasks-empty
+	margin-bottom: 20px
+	.btn
+		border-radius: 0 0 4px 4px
+.tasks-empty__in
+	padding: 60px 60px 90px 
+	border-radius: 4px 4px 0 0
+	background: #656d78
+	text-align: center
+.tasks-empty__text
+	margin-bottom: 30px
+	color: #FFF
+	font-size: 14px 
+
+
+
+.activity 
+	display: table
+	width: 100%
+	background: #FFF
+	border-radius: 4px 
+.activity__item
+	display: table-row
+	&:first-child
+		.table__cell
+			border: none
+.activity__cell
+	display: table-cell
+	height: 60px
+	padding: 15px
+	border-top: 1px solid $bg
+	vertical-align: middle
+	&:first-child
+		width: 50px
+.activity__task
+	position: relative
+	width: 50px
+	height: 50px
+	.activity__task-in
+		display: block
+		img
+			display: block
+			border-radius: 4px
+	.user-pic
+		position: absolute
+		top: -10px
+		right: -10px
+		margin: 0
+		border: 3px solid #fff
+.activity__time
+	text-align: right
+.activity__user
+	position: relative
+	padding-left: 75px
+	.user-pic, .ico-plusfive
+		position: absolute
+		top: 50%
+		left: 0
+		margin: -30px 0 0 0
+.activity__user-in
+	i
+		position: relative
+		top: -2px
+		display: inline-block
+		margin-right: 10px
+		vertical-align: middle
+
+
+.new
+	margin-bottom: 20px
+	>.btn
+		border-radius: 0 0 4px 4px
+.new__name
+	margin-bottom: 20px
+	input
+		width: 100%
+		height: 46px
+		padding: 0 18px
+		border: 2px solid #d3d7dd
+		border-radius: 6px
+		background-color: #fff
+		box-shadow: inset 0 0 0 2px #a9b1bd
+		font-size: 16px 
+		+placeholder-color($fc)
+.new__layout
+	background: #f9f9fa 
+	border-radius: 4px 4px 0 0
+	+clr
+.new__photo
+	float: left
+	width: 400px 
+	padding: 60px 150px 50px
+	background: #656D78
+	border-radius: 4px 0 0 0
+	text-align: center
+	.ico-camera
+		margin-bottom: 50px
+.new__photo-text
+	margin-bottom: 40px
+	font-size: 14px
+	color: #fff 
+.new__photo-btns
+	width: 300px
+	margin: 0 auto 
+	.btn
+		font-size: 11px
+	.btn_black	
+		border-radius: 4px 4px 0 0
+	.btn_fb
+		border-radius: 0 0 4px 4px
+.new__detail
+	float: left
+	width: 300px 
+	.title
+		border-radius: 0 4px 0 0 
+.new__detail-in
+	.field
+		padding: 15px 20px 
+		border-top: 1px solid $bg
+		&:first-child
+			border: none
+
+
+
+.title
+	height: 50px
+	padding: 0 20px
+	border-bottom: #D4D8DE 2px solid 
+	background: #FFF
+	line-height: 48px
+	+box
 
 
 
 
+.friends__value
+	margin-bottom: 20px
+	+clr
+	.title, .btn
+		float: left
+		width: 50%
+	.btn
+		border-radius: 0 4px 4px 0
+		font-size: 11px
+	.title
+		border-radius: 4px 0 0 4px
+		font-size: 16px
+.friends__list
+	margin-bottom: 20px
+	background: #FFF
+	border-radius: 4px 
+.friends__item
+	position: relative
+	padding: 15px
+	border-top: 1px solid $bg 
+	font-size: 0
+	&:first-child
+		border: none
+	.user-pic
+		float: none
+		display: inline-block
+		vertical-align: middle
+		font-size: 12px
+.friends__details, .friends__action
+	display: inline-block
+	vertical-align: middle
+	font-size: 12px
+.friends__details
+	width: 290px
+	margin-right: 20px
+.friends__action
+	width: 230px
+	li
+		margin-top: 5px
+		&:first-child
+			margin: 0
+.friends__name
+	margin-bottom: 5px
+	font-size: 16px
+	line-height: 1.2
+	a
+		color: $fc 
+.friends__city
+	color: $gray 
+.friends__mark
+	margin-bottom: 20px
+	text-align: center
+	&.is-fixed
+		position: fixed
+		bottom: 0
+		left: 50%
+		width: 680px
+		margin: 0 0 0 -500px
+		a
+			display: block
+			padding: 15px
+			background: rgb(0,0,0) 
+			background: rgba(0,0,0,.5) 
+			color: #FFF 
+.friends__request
+	.friends__item
+		border-radius: 0 0 4px 4px
+	.title
+		padding: 0 15px 0 12px
+		border-radius: 4px 4px 0 0
+		i
+			position: relative
+			top: -2px
+			display: inline-block
+			margin-right: 12px
+			vertical-align: middle
+	.friends__item
+		background: #f9f9fa
+		&:hover
+			background: #fff 
+	.friends__details
+		width: 195px
+		margin: 0
+	.friends__name
+		margin-bottom: 10px
+	.friends__action
+		width: auto
+		li
+			display: inline-block
+			margin: 0
+			&:first-child
+				margin-right: 25px 
+				font-weight: bold
+.friends__counter
+	position: absolute
+	top: 15px
+	right: 15px
+	width: 30px
+	height: 30px
+	background: #ED5565
+	border-radius: 50%
+	color: #fff  
+	text-align: center
+	line-height: 30px
+	font-size: 12px
+.friends_wide, .friends_wide-popup
+	.friends__value
+		.btn
+			width: 340px
+		.title
+			width: 660px
+	.friends__mark
+		&.is-fixed
+			width: 1000px
+	.friends__list
+		font-size: 0
+	.friends__item
+		display: inline-block
+		width: 50%
+		margin-top: -1px
+		border-bottom: 1px solid $bg 
+		vertical-align: top
+		+box
+		&:nth-child(2n+1)
+			border-right: 1px solid $bg 
+		&:nth-child(2)
+			border-top: none 
+.friends_wide
+	.friends__details
+		width: 150px
+	.friends__action
+		width: 160px
+.friends_wide-popup
+	.friends__list
+		margin: 0
+		background: #F9F9FA 
+	.title_mod
+		margin-top: -1px
+		border-top: 1px solid $bg
+	.friends__details
+		width: 220px
+	.friends__action
+		width: 150px
+		text-align: right
+	.friends__action_orange
+		a
+			color: $org 
+		
+
+
+.popup
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	padding: 30px 0
+	background: rgb(101,109,120)  
+	background: rgba(101,109,120,.9)
+	z-index: 2000 
+	overflow: auto
+.popup_enter
+	padding: 100px 0
+	.popup__in
+		width: 680px
+.popup__in
+	width: 1000px
+	margin: 0 auto
+	  
+
+.ava, .setting
+	margin-bottom: 20px
+	>.btn
+		border-radius: 0 0 4px 4px
+		font-size: 11px
+.ava
+	.title
+		border-radius: 4px 4px 0 0
+.setting
+	.title
+		&:first-child
+			border-radius: 4px 4px 0 0
+.ava__in
+	position: relative
+	padding: 30px
+	background: #f9f9fa
+	text-align: center
+	font-size: 0
+	.user-pic
+		float: none
+		display: inline-block
+		margin: 0
+		font-size: 12px
+	.delete-gray 
+		position: absolute
+		top: 15px
+		right: 15px
+.ava__load-in
+	padding: 25px 50px 95px
+	background: $gray
+	text-align: center
+.ava__load-text
+	margin-bottom: 25px
+	color: #FFF 
+.ava__load
+	.btn
+		font-size: 11px
+	.btn_fb
+		border-radius: 0 0 4px 4px
+
+
+.enter
+	>.btn
+		border-radius: 0 0 4px 4px
+		font-size: 11px
+.enter__header
+	+clr
+	.title, .btn
+		float: left
+		width: 50%
+	.title
+		border-radius: 4px 0 0 0
+	.btn
+		border-radius: 0 4px 0 0
+		font-size: 11px
 
 
 
 
-
-
-
-
-
-
+.alert
+	>.btn
+		border-radius: 0 0 4px 4px
+		font-size: 11px
+.alert__in
+	position: relative
+	padding: 70px
+	border-radius: 4px 4px 0 0
+	background: #FFF 
+	text-align: center
+	.close
+		position: absolute
+		top: 15px
+		right: 15px
+	>i
+		display: inline-block
+		margin-bottom: 25px
+		vertical-align: top
+.alert__text
+	+med
+	font-size: 14px
 
 
 

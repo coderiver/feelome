@@ -56,6 +56,7 @@ $link: #3bafda
 $red: #ed5565
 $org: #fc6e51
 $bg: #e6e9ed
+$gray: #656d78
 	
 body
 	background: $bg 
@@ -63,6 +64,8 @@ body
 	font-size: 12px 
 	line-height: 1.4
 	color: $fc
+	&.no-scroll
+		overflow: hidden
 a
 	color: $link 
 	text-decoration: none
@@ -118,6 +121,9 @@ button
 .btn_orange
 	background: #fc6e51
 	border-color: #ca5841 
+.btn_black
+	background: #434a54
+	border-color: #363b43 
 	
 
 
@@ -315,16 +321,20 @@ button
 		top: -10px
 		right: 25px
 		+arr(20,10,#fff,t)
-.user__data
+.user__data, .profile__data
 	padding: 15px
-	+clr
-.user__info
-	display: table
-	padding-top: 25px
-.user__name
+	font-size: 0
+	.user__info, .user-pic, .profile__info
+		float: none
+		display: inline-block
+		vertical-align: middle
+		font-size: 12px
+.user__info, .profile__info
+	max-width: 160px
+.user__name, .profile__name
 	margin-bottom: 3px
 	font-size: 16px
-.user__stats
+.user__stats, .profile__stats
 	border: 1px solid $bg
 	border-width: 1px 0
 	font-size: 0
@@ -344,6 +354,15 @@ button
 		display: block
 		font-size: 30px
 		line-height: 1.2
+.profile__stats
+	li
+		padding: 0
+		&.is-orange
+			a
+				color: $org 
+	a
+		display: block
+		padding: 15px 0
 .user__actions
 	padding: 15px 20px
 	+clr
@@ -362,6 +381,17 @@ button
 	color: #AAB2BD 
 	i
 		+s(user-out)
+.profile
+	margin-bottom: 20px
+	background: #FFF
+	border-radius: 4px 
+.profile__action
+	.btn
+		font-size: 11px
+	.btn_mod
+		border-radius: 0 0 4px 4px
+		box-shadow: 0 1px 0 rgba(255,255,255,.3) inset
+		
 
 
 .search-form
@@ -385,20 +415,179 @@ button
 		+s(search)
 
 
+
+
+.field
+	display: block
+	span
+		display: block
+	&.is-error
+		.field__el
+			input
+				padding: 0 13px
+				border: 2px solid #da4352
+				box-shadow: 0 0 0 2px #f8d9dc
+.field__label
+	margin-bottom: 5px
+	font-size: 14px
+.field__el
+	input
+		width: 100%
+		height: 40px
+		padding: 0 15px
+		background: $bg 
+		border-radius: 4px
+		font-size: 14px
+.field__help
+	margin-top: 5px
+	font-style: italic
+	font-size: 11px
+	color: #AAB2BD  
+.field__error
+	position: relative
+	padding: 5px 0 0 25px
+	color: #da4352
+	i
+		position: absolute
+		top: 4px
+		left: 1px
+		+s(error)
+
+
+
+.select
+	position: relative
+	select
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		padding: 0 15px
+		-webkit-appearance: none
+		opacity: 0
+		cursor: pointer 
+.select__head
+	position: relative
+	height: 40px
+	border-radius: 4px
+	background: $bg 
+	padding: 0 20px 0 15px
+	line-height: 40px
+	+box
+	font-size: 14px
+	i
+		position: absolute
+		top: 18px
+		right: 10px
+		+arr(12,6,$fc,b)
+
+
+.fieldset
+	padding: 30px 15px
+	background: #f9f9fa 
+	.field
+		margin-top: 10px
+		&:first-child
+			margin: 0
+	.field__el, .field__label, .select
+		display: inline-block
+		vertical-align: middle
+	.field__el, .select
+		width: 260px
+	.field__label
+		width: 175px
+		margin-right: 18px
+		text-align: right
+	.checkbox, .field__error
+		margin-left: 195px
+.fieldset__password
+	padding: 10px 0 15px 195px
+
+
+.checkbox
+	position: relative
+	display: block
+	padding-left: 30px
+	+nosel
+	input
+		position: absolute
+		top: 4px
+		left: 4px
+		opacity: 0 
+		z-index: 2 
+		&:checked + span
+			&:after
+				content: ""
+				position: absolute
+				top: 4px
+				left: 4px
+				width: 12px
+				height: 12px
+				background: $bl 
+	span
+		display: block
+		padding: 2px 0
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			width: 20px
+			height: 20px
+			background: $bg 
+
+
+
 .ico-fb
 	position: relative
 	top: 3px
 	display: inline-block
+	margin-right: 10px
 	+s(enter-fb)
 .ico-quote
 	+s(quote)
+.ico-camera, .ico-camera-small
+	display: inline-block
+	+s(camera)
+	vertical-align: top
+.ico-camera-small
+	+s(camera-small)
 .ico-ribbon-white
 	+s(ribbon-white)
+.ico-ribbon-red
+	+s(ribbon-red-ico)
+.ico-check
+	+s(check)
+.ico-delete-big
+	+s(delete-big)
+.ico-star
+	+s(star)
+.ico-plus
+	+s(plus)
+.ico-lock
+	+s(lock)
+.ico-plus-black
+	+s(plus-black)
+.ico-plusfive
+	+s(plusfive)
 
 .warning
 	+s(warning)
 .like
 	+s(like)
+.edit
+	+s(edit)
+.close
+	+s(close)
+.delete
+	+s(delete)
+.delete-gray
+	+s(delete-gray)
+.fullscreen
+	+s(fullscreen)
+.ico-no-fullscreen
+	+s(no-fullscreen)
 
 
 

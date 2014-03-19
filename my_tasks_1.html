@@ -1,0 +1,301 @@
+<!doctype html>
+<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="initial-scale=1"/>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+	<script src="js/jquery.js"></script>
+	<script src="js/common.js"></script>
+</head>
+<body>
+<div class="wrapper">
+	<!-- header -->
+	<header class="header">
+		<div class="header__in">
+			<div class="l-center">
+				<a class="logo" href="#">feeloo.me</a>
+				<div class="search-form">
+					<label><input type="text" placeholder="Поиск"><i></i></label>
+				</div>
+				<div class="user">
+					<div class="user__head">
+						<img src="http://placehold.it/38x38" width="38" height="38" alt="">
+						<i class="user__arr"></i>
+					</div>
+					<div class="user__dropdown" style="display: none;">
+						<div class="user__data">
+							<div class="user-pic user-pic_big">
+								<img src="http://placehold.it/90x90" width="90" height="90" alt="">
+								<span>15</span>
+							</div>
+							<div class="user__info">
+								<div class="user__name">Евгений Иванов</div>
+								<div class="user__city">Москва, Россия</div>
+							</div>
+						</div>
+						<ul class="user__stats">
+							<li><span>24</span>задания</li>
+							<li><span>34</span>друга</li>
+							<li><span>257</span>подписчиков</li>
+						</ul>
+						<div class="user__actions">
+							<a class="user__setting" href="#"><i></i><span>Настройки</span></a>
+							<a class="user__out" href="#"><i></i><span>Выход</span></a>
+						</div>
+					</div>
+				</div>
+				<!-- nav -->
+				<nav class="nav">
+					<ul class="l-center">
+						<li><a href="#"><i class="nav__ico-1"></i><span>Новости</span></a></li>
+						<li class="is-active"><a href="#"><i class="nav__ico-2"></i><span>Мои задания</span></a></li>
+						<li><a href="#"><i class="nav__ico-3"></i><span>Мои друзья</span><strong>15</strong></a></li>
+						<li><a href="#"><i class="nav__ico-4"></i><span>Активность</span><strong>24</strong></a></li>
+					</ul>
+				</nav>
+				<ul class="links">
+					<li><a href="#"><i class="links__ico-1"></i><span>О сайте</span></a></li>
+					<li><a href="#"><i class="links__ico-2"></i><span>Правила</span></a></li>
+					<li><a href="#"><i class="links__ico-3"></i><span>Поддержка</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<div class="l-center">
+		<!-- add task -->
+		<div class="add-task">
+			<div class="add-task__me">
+				<div class="add-task__stats">Всего 15 заданий, из них <a href="#">5 не разгаданы</a></div>
+				<button class="btn btn_orange">Добавить задание</button>
+			</div>
+		</div>
+		<!-- my tasks -->
+		<div class="my">
+			<!-- 1 -->
+			<div class="my__item">
+				<div class="my__in">
+					<div class="my__top">
+						<div class="my__top-user">
+							<a class="user-pic" href="#">
+								<img src="http://placehold.it/60x60" width="60" height="60" alt="">
+								<span>7</span>
+							</a>
+							<div class="my__title">Somewhere in USA</div>
+						</div>
+						<div class="my__action">
+							<button class="edit"></button>
+							<button class="delete"></button>
+						</div>
+					</div>
+					<div class="my__pic">
+						<img src="http://placehold.it/700x550" width="700" height="550" alt="">
+					</div>
+				</div>
+				<div class="my__comment-stats">
+					<button class="fullscreen"></button>
+					<i></i>15 комментариев <a href="#">(6 новых)</a>
+				</div>
+				<div class="my__comments">
+					<!-- comment -->
+					<div class="comment">
+						<!-- 1 -->
+						<div class="comment__item">
+							<a class="user-pic user-pic_middle" href="#">
+								<img src="http://placehold.it/50x50" width="50" height="50" alt="">
+							</a>
+							<div class="comment__in">
+								<div class="comment__top">
+									<div class="comment__time">1 час</div>
+									<div class="comment__name"><a href="#">Vallentine Romanova</a></div>
+								</div>
+								<div class="comment__text">Томас Джонатан Джексон, с 1861 года широко известный также под прозвищем «Стоунуолл»</div>
+								<div class="comment__down">
+									<a class="comment__link" href="#">Ответить</a>
+									<div class="comment__true"><i></i><span>Верно!</span></div>
+								</div>
+							</div>
+						</div>
+						<!-- reply -->
+						<div class="comment__item comment__item_reply">
+							<a class="user-pic user-pic_middle" href="#">
+								<img src="http://placehold.it/50x50" width="50" height="50" alt="">
+							</a>
+							<div class="comment__in">
+								<div class="comment__top">
+									<div class="comment__time">45 мин</div>
+									<div class="comment__name"><a href="#">Вы</a></div>
+								</div>
+								<div class="comment__text">Валентина, не очень понятно, при чем тут Томас Джонатан </div>
+								<div class="comment__down">
+									<a class="comment__link" href="#">Ответить</a>
+									<a class="comment__link" href="#">Удалить</a>
+								</div>
+							</div>
+						</div>
+						<!-- 2 -->
+						<div class="comment__item comment__correct">
+							<a class="user-pic user-pic_middle" href="#">
+								<img src="http://placehold.it/50x50" width="50" height="50" alt="">
+							</a>
+							<div class="comment__in">
+								<div class="comment__top">
+									<div class="comment__time">1 час</div>
+									<div class="comment__name"><a href="#">Vallentine Romanova</a></div>
+								</div>
+								<div class="comment__text">Китайский квартал в Нью-Йорке</div>
+								<div class="comment__down">
+									<a class="comment__link" href="#">Ответить</a>
+									<div class="comment__true"><i></i></div>
+								</div>
+							</div>
+						</div>
+						<!-- reply -->
+						<div class="comment__item comment__item_reply">
+							<a class="user-pic user-pic_middle" href="#">
+								<img src="http://placehold.it/50x50" width="50" height="50" alt="">
+							</a>
+							<div class="comment__in">
+								<div class="comment__top">
+									<div class="comment__time"> 5 сек</div>
+									<div class="comment__name"><a href="#">Вы</a></div>
+								</div>
+								<div class="comment__text">И 5 балов уходит Марии! :)</div>
+								<div class="comment__down">
+									<a class="comment__link" href="#">Ответить</a>
+									<a class="comment__link" href="#">Удалить</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="my__btn-comment">
+					<button class="btn">КОММЕНТИРОВАТЬ</button>
+				</div>
+			</div>
+			<!-- 2 -->
+			<div class="my__item is-closed">
+				<div class="my__in">
+					<div class="my__top">
+						<div class="my__top-user">
+							<a class="user-pic" href="#">
+								<img src="http://placehold.it/60x60" width="60" height="60" alt="">
+								<span>7</span>
+							</a>
+							<div class="my__title">Somewhere in USA</div>
+						</div>
+						<div class="my__winner">
+							<i class="ico-ribbon-white"></i>
+							<a href="#">Johnny Doooe</a>
+							<a class="user-pic" href="#">
+								<img src="http://placehold.it/60x60" width="60" height="60" alt="">
+								<span>15</span>
+							</a>
+						</div>
+					</div>
+					<div class="my__pic">
+						<img src="http://placehold.it/700x550" width="700" height="550" alt="">
+					</div>
+				</div>
+				<div class="my__comment-stats">
+					<button class="fullscreen"></button>
+					<i></i>15 комментариев <a href="#">(6 новых)</a>
+				</div>
+				<div class="my__comments">
+					<!-- comment -->
+					<div class="comment">
+						<!-- 1 -->
+						<div class="comment__item">
+							<a class="user-pic user-pic_middle" href="#">
+								<img src="http://placehold.it/50x50" width="50" height="50" alt="">
+							</a>
+							<div class="comment__in">
+								<div class="comment__top">
+									<div class="comment__time">1 час</div>
+									<div class="comment__name"><a href="#">Vallentine Romanova</a></div>
+								</div>
+								<div class="comment__text">Томас Джонатан Джексон, с 1861 года широко известный также под прозвищем «Стоунуолл»</div>
+								<div class="comment__down">
+									<a class="comment__link" href="#">Ответить</a>
+									<div class="comment__true"><i></i><span>Верно!</span></div>
+								</div>
+							</div>
+						</div>
+						<!-- reply -->
+						<div class="comment__item comment__item_reply">
+							<a class="user-pic user-pic_middle" href="#">
+								<img src="http://placehold.it/50x50" width="50" height="50" alt="">
+							</a>
+							<div class="comment__in">
+								<div class="comment__top">
+									<div class="comment__time">45 мин</div>
+									<div class="comment__name"><a href="#">Вы</a></div>
+								</div>
+								<div class="comment__text">Валентина, не очень понятно, при чем тут Томас Джонатан </div>
+								<div class="comment__down">
+									<a class="comment__link" href="#">Ответить</a>
+									<a class="comment__link" href="#">Удалить</a>
+								</div>
+							</div>
+						</div>
+						<!-- 2 -->
+						<div class="comment__item comment__correct">
+							<a class="user-pic user-pic_middle" href="#">
+								<img src="http://placehold.it/50x50" width="50" height="50" alt="">
+							</a>
+							<div class="comment__in">
+								<div class="comment__top">
+									<div class="comment__time">1 час</div>
+									<div class="comment__name"><a href="#">Vallentine Romanova</a></div>
+								</div>
+								<div class="comment__text">Китайский квартал в Нью-Йорке</div>
+								<div class="comment__down">
+									<a class="comment__link" href="#">Ответить</a>
+									<div class="comment__true"><i></i></div>
+								</div>
+							</div>
+						</div>
+						<!-- reply -->
+						<div class="comment__item comment__item_reply">
+							<a class="user-pic user-pic_middle" href="#">
+								<img src="http://placehold.it/50x50" width="50" height="50" alt="">
+							</a>
+							<div class="comment__in">
+								<div class="comment__top">
+									<div class="comment__time"> 5 сек</div>
+									<div class="comment__name"><a href="#">Вы</a></div>
+								</div>
+								<div class="comment__text">И 5 балов уходит Марии! :)</div>
+								<div class="comment__down">
+									<a class="comment__link" href="#">Ответить</a>
+									<a class="comment__link" href="#">Удалить</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="my__btn-comment">
+					<button class="btn">КОММЕНТИРОВАТЬ</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,174 @@
+<!doctype html>
+<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="initial-scale=1"/>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+	<script src="js/jquery.js"></script>
+	<script src="js/common.js"></script>
+</head>
+<body>
+<div class="wrapper">
+	<!-- header -->
+	<header class="header">
+		<div class="header__in">
+			<div class="l-center">
+				<a class="logo" href="#">feeloo.me</a>
+				<div class="search-form">
+					<label><input type="text" placeholder="Поиск"><i></i></label>
+				</div>
+				<div class="user">
+					<div class="user__head">
+						<img src="http://placehold.it/38x38" width="38" height="38" alt="">
+						<i class="user__arr"></i>
+					</div>
+					<div class="user__dropdown" style="display: none;">
+						<div class="user__data">
+							<div class="user-pic user-pic_big">
+								<img src="http://placehold.it/90x90" width="90" height="90" alt="">
+								<span>15</span>
+							</div>
+							<div class="user__info">
+								<div class="user__name">Евгений Иванов</div>
+								<div class="user__city">Москва, Россия</div>
+							</div>
+						</div>
+						<ul class="user__stats">
+							<li><span>24</span>задания</li>
+							<li><span>34</span>друга</li>
+							<li><span>257</span>подписчиков</li>
+						</ul>
+						<div class="user__actions">
+							<a class="user__setting" href="#"><i></i><span>Настройки</span></a>
+							<a class="user__out" href="#"><i></i><span>Выход</span></a>
+						</div>
+					</div>
+				</div>
+				<!-- nav -->
+				<nav class="nav">
+					<ul class="l-center">
+						<li class="is-active"><a href="#"><i class="nav__ico-1"></i><span>Новости</span></a></li>
+						<li><a href="#"><i class="nav__ico-2"></i><span>Мои задания</span></a></li>
+						<li><a href="#"><i class="nav__ico-3"></i><span>Мои друзья</span><strong>15</strong></a></li>
+						<li><a href="#"><i class="nav__ico-4"></i><span>Активность</span><strong>24</strong></a></li>
+					</ul>
+				</nav>
+				<ul class="links">
+					<li><a href="#"><i class="links__ico-1"></i><span>О сайте</span></a></li>
+					<li><a href="#"><i class="links__ico-2"></i><span>Правила</span></a></li>
+					<li><a href="#"><i class="links__ico-3"></i><span>Поддержка</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<div class="l-center">
+		<!-- layout -->
+		<div class="layout layout_mod">
+			<div class="layout__aside">
+				<!-- ava -->
+				<div class="ava">
+					<div class="title">Фотография</div>
+					<div class="ava__in">
+						<div class="user-pic user-pic_big">
+							<img src="http://placehold.it/90x90" width="90" height="90" alt="">
+						</div>
+						<button class="delete-gray"></button>
+					</div>
+					<button class="btn">ИЗМЕНИТЬ ФОТОГРАФИЮ</button>
+				</div>
+			</div>
+			<div class="layout__section">
+				<!-- setting -->
+				<div class="setting">
+					<div class="title">Личные данные</div>
+					<fieldset class="fieldset">
+						<label class="field">
+							<span class="field__label">Ваше имя:</span>
+							<span class="field__el">
+								<input type="text" value="Александр">
+							</span>
+						</label>
+						<label class="field">
+							<span class="field__label">Ваша фамилия:</span>
+							<span class="field__el">
+								<input type="text" value="Ковальчук">
+							</span>
+						</label>
+					</fieldset>
+					<div class="title">Смена пароля</div>
+					<fieldset class="fieldset">
+						<label class="field">
+							<span class="field__label">Старый пароль:</span>
+							<span class="field__el">
+								<input type="password">
+							</span>
+						</label>
+						<label class="field">
+							<span class="field__label">Новый пароль:</span>
+							<span class="field__el">
+								<input type="password">
+							</span>
+						</label>
+						<label class="field">
+							<span class="field__label">Повторите пароль:</span>
+							<span class="field__el">
+								<input type="password">
+							</span>
+						</label>
+					</fieldset>
+					<div class="title">Место жительства</div>
+					<fieldset class="fieldset">
+						<div class="field">
+							<div class="field__label">Страна:</div>
+							<div class="select">
+								<div class="select__head">Россия<i></i></div>
+								<select name="" id="">
+									<option value="">Option 1</option>
+									<option value="">Option 2</option>
+									<option value="">Option 3</option>
+									<option value="">Option 4</option>
+									<option value="">Option 5</option>
+									<option value="">Option 6</option>
+								</select>
+							</div>
+						</div>
+						<div class="field">
+							<div class="field__label">Город:</div>
+							<div class="select">
+								<div class="select__head">Владивосток<i></i></div>
+								<select name="" id="">
+									<option value="">Option 1</option>
+									<option value="">Option 2</option>
+									<option value="">Option 3</option>
+									<option value="">Option 4</option>
+									<option value="">Option 5</option>
+									<option value="">Option 6</option>
+								</select>
+							</div>
+						</div>
+					</fieldset>
+					<button class="btn">СОХРАНИТЬ ИЗМЕНЕНИЯ</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

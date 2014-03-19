@@ -66,12 +66,31 @@
 	</header>
 	<div class="l-center">
 		<!-- layout -->
-		<div class="layout">
-			<div class="layout__section">
-				<!-- add task -->
-				<div class="add-task">
-					<button class="btn">Добавить задание</button>
+		<div class="layout layout_mod">
+			<div class="layout__aside">
+				<!-- profile -->
+				<div class="profile">
+					<div class="profile__data">
+						<div class="user-pic user-pic_big">
+							<img src="http://placehold.it/90x90" width="90" height="90" alt="">
+						</div>
+						<div class="profile__info">
+							<div class="profile__name">Александр Ковальчук</div>
+							<div class="profile__city">Москва, Россия</div>
+						</div>
+					</div>
+					<ul class="profile__stats">
+						<li><a href="#"><span>24</span>задания</a></li>
+						<li><a href="#"><span>34</span>друга</a></li>
+						<li class="is-orange"><a href="#"><span>15</span>очков</a></li>
+					</ul>
+					<div class="profile__action">
+						<button class="btn">Добавить АЛЕКСАНДРА в друзья</button>
+						<button class="btn btn_mod">ПОДПИСАТЬСЯ НА АЛЕКСАНДРА</button>
+					</div>
 				</div>
+			</div>
+			<div class="layout__section">
 				<!-- tasks -->
 				<div class="tasks">
 					<!-- 1 -->
@@ -109,10 +128,10 @@
 									</a>
 									<div class="add-comment__in">
 										<div class="add-comment__form">
-											<button class="btn btn_small">ОТПРАВИТЬ</button>
 											<div class="add-comment__field">
 												<input type="text" placeholder="Ваш комментарий">
 											</div>
+											<button class="btn btn_small">ОТПРАВИТЬ</button>
 										</div>
 										<div class="add-comment__symbols">Осталось 140 символов</div>
 									</div>
@@ -161,139 +180,14 @@
 									</a>
 									<div class="add-comment__in">
 										<div class="add-comment__form">
-											<button class="btn btn_small">ОТПРАВИТЬ</button>
 											<div class="add-comment__field">
 												<input type="text" placeholder="Ваш комментарий">
 											</div>
+											<button class="btn btn_small">ОТПРАВИТЬ</button>
 										</div>
 										<div class="add-comment__symbols">Осталось 140 символов</div>
 									</div>
 								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="layout__aside">
-				<!-- tabs -->
-				<div class="tabs">
-					<div class="tabs__nav">
-						<button class="is-active" data-tab="tabs__item_1">Популярное</button>
-						<button data-tab="tabs__item_1">ЛУЧШИЕ Знатоки</button>
-					</div>
-					<div class="tabs__wrapper">
-						<div class="tabs__item tabs__item_1">
-							<!-- popupal -->
-							<div class="popular">
-								<!-- 1 -->
-								<div class="task">
-									<a class="user-pic" href="#">
-										<img src="http://placehold.it/60x60" width="60" height="60" alt="">
-										<span class="is-empty">0</span>
-									</a>
-									<a class="task__in" href="#">
-										<div class="task__pic">
-											<img src="http://placehold.it/190x190" alt="">
-										</div>
-										<div class="task__user">Vlada89</div>
-										<div class="task__comment"><i></i><span>156</span></div>
-									</a>
-								</div>
-								<!-- 2 -->
-								<div class="task">
-									<a class="user-pic" href="#">
-										<img src="http://placehold.it/60x60" width="60" height="60" alt="">
-										<span>15</span>
-									</a>
-									<a class="task__in" href="#">
-										<div class="task__pic">
-											<img src="http://placehold.it/190x190" alt="">
-										</div>
-										<div class="task__user">Vlada89</div>
-										<div class="task__comment"><i></i><span>156</span></div>
-									</a>
-								</div>
-								<!-- 3 -->
-								<div class="task">
-									<a class="user-pic" href="#">
-										<img src="http://placehold.it/60x60" width="60" height="60" alt="">
-										<span class="is-empty">0</span>
-									</a>
-									<a class="task__in" href="#">
-										<div class="task__pic">
-											<img src="http://placehold.it/190x190" alt="">
-										</div>
-										<div class="task__user">Vlada89</div>
-										<div class="task__comment"><i></i><span>156</span></div>
-									</a>
-								</div>
-								<!-- 4 -->
-								<div class="task">
-									<a class="user-pic" href="#">
-										<img src="http://placehold.it/60x60" width="60" height="60" alt="">
-										<span>15</span>
-									</a>
-									<a class="task__in" href="#">
-										<div class="task__pic">
-											<img src="http://placehold.it/190x190" alt="">
-										</div>
-										<div class="task__user">Vlada89</div>
-										<div class="task__comment"><i></i><span>156</span></div>
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="tabs__item tabs__item_2" style="display: none">
-							<!-- expert -->
-							<div class="expert">
-								<!-- 1 -->
-								<a class="expert__item" href="#">
-									<div class="user-pic">
-										<img src="http://placehold.it/60x60" width="60" height="60" alt="">
-									</div>
-									<div class="expert__name">Vallentine Romanova</div>
-									<div class="expert__counter">50</div>
-								</a>
-								<!-- 2 -->
-								<a class="expert__item" href="#">
-									<div class="user-pic">
-										<img src="http://placehold.it/60x60" width="60" height="60" alt="">
-									</div>
-									<div class="expert__name">Vallentine Romanova</div>
-									<div class="expert__counter">50</div>
-								</a>
-								<!-- 3 -->
-								<a class="expert__item" href="#">
-									<div class="user-pic">
-										<img src="http://placehold.it/60x60" width="60" height="60" alt="">
-									</div>
-									<div class="expert__name">Vallentine Romanova</div>
-									<div class="expert__counter">50</div>
-								</a>
-								<!-- 4 -->
-								<a class="expert__item" href="#">
-									<div class="user-pic">
-										<img src="http://placehold.it/60x60" width="60" height="60" alt="">
-									</div>
-									<div class="expert__name">Vallentine Romanova</div>
-									<div class="expert__counter">50</div>
-								</a>
-								<!-- 5 -->
-								<a class="expert__item" href="#">
-									<div class="user-pic">
-										<img src="http://placehold.it/60x60" width="60" height="60" alt="">
-									</div>
-									<div class="expert__name">Vallentine Romanova</div>
-									<div class="expert__counter">50</div>
-								</a>
-								<!-- 6 -->
-								<a class="expert__item" href="#">
-									<div class="user-pic">
-										<img src="http://placehold.it/60x60" width="60" height="60" alt="">
-									</div>
-									<div class="expert__name">Vallentine Romanova</div>
-									<div class="expert__counter">50</div>
-								</a>
 							</div>
 						</div>
 					</div>
