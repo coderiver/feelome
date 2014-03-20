@@ -9,8 +9,20 @@
 	background: #FFF 
 	border-bottom: #CCC 2px solid 
 	+clr
+	+rt(1k)
+		position: relative
+		display: table
+		width: 100%
+		padding: 0
+		border: none
+	.logo
+		+rt(1k)
+			display: none
 .topper__right
 	float: right
+	+rt(1k)
+		float: none
+		display: table-row
 	a
 		float: left
 		width: auto
@@ -18,12 +30,18 @@
 		color: #fff 
 		font-size: 12px
 		text-transform: none
+		+rt(1k)
+			float: none
+			display: table-cell
 	.topper__enter
 		height: 48px
 		padding: 0 30px 
 		border-left: $bg 1px solid
 		line-height: 48px
+		text-align: center
 		color: $bl 
+		+rt(1k)
+			border-bottom: #CCC 2px solid 
 .topper__fb
 	.ico-fb
 		margin: 0 0 0 10px
@@ -34,21 +52,39 @@
 .main__layout
 	width: 680px
 	margin: 0 auto
+	+rt(1k)
+		width: auto
 .main__in
 	display: table-cell
 	width: 680px
 	height: 100vh
-	padding: 100px 0 50px
+	padding: 70px 0 20px
 	vertical-align: middle
 	text-align: center
 	+box
+	+rt(1k)
+		display: block
+		width: auto
+		height: auto
+		padding: 20px 
 .main__center	
 	display: inline-block
 	width: 680px 
+	+rt(1k)
+		display: block
+		width: auto
 	.logo-circle
 		margin-bottom: 40px
+		+rt(h700)
+			margin-bottom: 20px
+		+rt(1k)
+			margin-bottom: 10px
 .main__form
 	margin-bottom: 45px
+	+rt(h700)
+		margin-bottom: 25px
+	+rt(1k)
+		margin-bottom: 15px
 	.btn
 		border-radius: 0 0 4px 4px
 .main__question	
@@ -58,6 +94,11 @@
 	font-size: 30px
 	text-shadow: 0 1px 3px #000
 	line-height: 1.2
+	+rt(h700)
+		margin-bottom: 15px
+	+rt(1k)
+		margin-bottom: 10px
+		font-size: 20px 
 .main__answer
 	padding: 12px
 	border-radius: 4px 4px 0 0
@@ -77,6 +118,10 @@
 	margin-bottom: 50px
 	text-align: center
 	font-size: 0
+	+rt(h700)
+		margin-bottom: 25px
+	+rt(1k)
+		margin-bottom: 20px
 	button
 		width: 10px
 		height: 10px
@@ -90,10 +135,7 @@
 
 .join
 	position: relative
-	height: 100vh
-	padding: 50px 0 125px
 	background: #FFF 
-	+box
 .join__pics-left, .join__pics-right
 	position: absolute
 	top: 0
@@ -111,14 +153,35 @@
 			top: 33.4%
 		&.join__pics-3
 			top: 66.7% 
+	+rt(1k)
+		display: none
 .join__pics-left
 	left: 0
 	right: 50%
 	margin-right: 450px
+.join__details
+	display: inline-block
+	padding: 25px 0
+	vertical-align: top
+	+rt(h700)
+		padding: 15px 0 
+	+rt(1k)
+		padding: 20px 
 .join__pics-right
 	right: 0
 	left: 50%
 	margin-left: 450px
+.join__in
+	display: table-cell
+	width: 500px
+	height: 100vh
+	padding-bottom: 100px
+	+box
+	vertical-align: middle
+	+rt(1k)
+		display: block
+		width: auto
+		height: auto
 .join__pics-horizontal
 	position: absolute
 	left: 0
@@ -140,34 +203,56 @@
 		vertical-align: top
 .join__center
 	position: relative
-	width: 900px
+	width: 500px
 	margin: 0 auto
 	text-align: center 
 	z-index: 2 
+	+rt(1k)
+		width: auto
 .join__plus
 	margin-bottom: 25px
 	font-size: 0
+	+rt(h700)
+		margin-bottom: 10px
+	+rt(1k)
+		margin-bottom: 10px
 	i
 		display: inline-block
 		+s(plus5)
+		+rt(h700)
+			+s(plus5-small)
 .join__title
 	margin-bottom: 15px
 	+med
 	font-size: 24px
+	+rt(h700)
+		margin-bottom: 0
+	+rt(1k)
+		margin-bottom: 5px
+		font-size: 20px
 .join__title-sub
 	margin-bottom: 25px
 	font-size: 14px
+	+rt(h700)
+		margin-bottom: 10px
 .join__form
 	width: 340px 
 	margin: 0 auto
+	+rt(1k)
+		width: auto
+		max-width: 340px
 	.btn
 		margin-bottom: 20px
 		border-radius: 0 0 4px 4px
 		font-size: 11px
+		+rt(h700)
+			margin-bottom: 10px
 	.btn_fb
 		margin-bottom: 25px
 		border-radius: 4px
 		font-size: 11px
+		+rt(h700)
+			margin-bottom: 10px
 .join__fieldset
 	border: 1px solid $bg
 	border-width: 2px 2px 0
@@ -180,10 +265,11 @@
 		padding: 0 17px
 		+placeholder-color($fc)
 		font-size: 14px
+		+rt(h700)
+			height: 40px
+			padding: 0 15px
 	&:first-child
 		border: none
-.join__info
-	padding-bottom: 25px
 
 
 
@@ -193,17 +279,26 @@
 .about__layout
 	width: 800px
 	margin: 0 auto
+	+rt(1k)
+		width: auto
 .about__in
 	display: table-cell
 	width: 800px
 	height: 100vh 
-	padding: 80px 0
+	padding: 50px 0
 	vertical-align: middle
 	+box
+	+rt(1k)
+		display: block
+		width: auto
+		height: auto
+		padding: 20px
 .about__center
 	text-align: center
 	.logo-circle
 		margin-bottom: 40px 
+		+rt(1k)
+			margin-bottom: 10px
 .about__title
 	margin-bottom: 5px
 	+med
@@ -212,9 +307,15 @@
 	margin-bottom: 40px
 	font-size: 14px
 	line-height: 1.6
+	+rt(1k)
+		margin-bottom: 20px
+		line-height: 1.4
 .about__join
 	width: 340px
 	margin: 0 auto
+	+rt(1k)
+		width: auto
+		max-width: 340px
 	button
 		width: 100%
 	.btn

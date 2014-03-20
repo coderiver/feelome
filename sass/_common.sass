@@ -47,6 +47,16 @@
 	font-family: "KlinicslabBold", Arial, sans-serif 
 	
 
+@mixin rt($media)
+	@if $media == h700
+		@media only screen and (max-height: 700px) and (min-width: 1000px)
+			@content
+	@if $media == 1k
+		@media only screen and (max-width: 1000px)
+			@content
+
+
+
 $bl: #4fc1e9
 $bl-b: #3f9aba
 $bld: #6c86bf
@@ -81,7 +91,8 @@ button
 .l-center
 	width: 1000px
 	margin: 0 auto
-
+	+rt(1k)
+		width: auto
 
 .logo
 	float: left
@@ -133,8 +144,14 @@ button
 	right: 0
 	bottom: 0
 	padding: 15px 20px
+	+rt(1k)
+		position: relative
+		padding: 15px 20px 40px
 .links
 	float: right
+	+rt(1k)
+		float: none
+		overflow: hidden
 	ul, li
 		float: left
 	li
@@ -156,9 +173,13 @@ button
 .links__ico-3
 	+s(links-ico3)
 .copyright
+	float: left
 	color: #AAB2BD
 	a
 		color: #AAB2BD 
+	+rt(1k)
+		float: none
+		margin-bottom: 20px
 
 
 .header
