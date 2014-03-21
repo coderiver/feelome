@@ -2,6 +2,9 @@
 .add-task
 	> .btn
 		border-radius: 4px 4px 0 0 
+		+rt(1k)
+			margin-bottom: 10px
+			border-radius: 4px
 	& + .tasks
 		border-radius: 0 0 4px 4px
 .add-task__in
@@ -20,11 +23,19 @@
 .add-task__me
 	margin-bottom: 20px
 	+clr
+	+rt(1k)
+		margin-bottom: 10px
 	.btn
 		float: left
 		width: 300px
 		border-radius: 0 4px 4px 0
 		font-size: 11px
+		+rt(1k)
+			width: 50%
+			height: 40px
+			line-height: 38px
+			+med
+			font-size: 9px
 .add-task__stats
 	float: left
 	width: 700px
@@ -35,9 +46,27 @@
 	border-bottom: 2px solid #ccc  
 	line-height: 48px
 	+box
-	font-size: 16px
-	a
-		color: #ED5565 
+	+rt(1k)
+		width: 50%
+		height: 40px
+		background: $gray
+		border-color: $gray 
+		text-align: center
+		line-height: 38px
+		+med
+		text-transform: uppercase
+		font-size: 9px
+		color: #FFF 
+	p
+		font-size: 16px
+		+rt(1k)
+			display: none
+		a
+			color: #ED5565 
+	span
+		display: none
+		+rt(1k)
+			display: block
 
 
 
@@ -85,11 +114,32 @@
 
 .tasks
 	padding: 15px 20px 15px 15px
+	margin-bottom: 20px
 	border-radius: 4px
 	background: #FFF 
+	+rt(1k)
+		padding: 0
+		background: none 
 .tasks__item
+	position: relative
 	margin-bottom: 15px
 	+clr	
+	margin-bottom: 10px
+	+rt(1k)
+		border-bottom: #CCD1D9 2px solid
+		border-radius: 4px 
+		>.user-pic
+			float: none
+			position: absolute
+			top: 65px
+			left: 15px
+			margin: 0
+			width: 50px
+			height: 50px
+			z-index: 10
+			img
+				width: 100%
+				height: 100%
 	&.is-completed
 		.tasks__top
 			background: #DA4453
@@ -99,6 +149,10 @@
 	float: right
 	width: 570px 
 	padding-top: 5px
+	+rt(1k)
+		float: none
+		width: auto
+		padding: 0
 .tasks__top
 	position: relative
 	padding: 10px 10px 10px 20px
@@ -111,6 +165,8 @@
 	top: 17px
 	left: -9px
 	+arr(9,18,$fc,l) 
+	+rt(1k)
+		display: none
 .tasks__user
 	float: left
 	padding: 7px 0 
@@ -129,6 +185,8 @@
 	.user-pic
 		float: none
 		margin: 0
+		+rt(1k)
+			display: none
 	a
 		+med
 		font-size: 14px
@@ -136,8 +194,8 @@
 .tasks__container
 	position: relative
 .tasks__pic
-	img
-		display: block
+	height: 340px
+	+cover
 .tasks__title
 	position: absolute
 	top: 0
@@ -147,10 +205,14 @@
 	+g(rgba(0,0,0,.7), rgba(0,0,0,0))
 	font-size: 16px 		
 	color: #FFF 
+	+rt(1k)
+		padding: 26px 20px 15px 80px
 	.ico-quote
 		position: absolute
 		top: 18px
 		left: 22px
+		+rt(1k)
+			display: none
 .tasks__action
 	position: absolute
 	left: 0
@@ -165,15 +227,22 @@
 .tasks__down
 	border: 1px solid $bg
 	border-radius: 0 0 4px 4px
-.tasks__down-in
+	+rt(1k)
+		background: #FFF 
+		
+
+
+.comment-stats
 	padding: 10px 20px
 	+clr
-.tasks__time
+.comment-stats__time
 	float: left
 	margin-right: 30px
-.tasks__comment-go	
+	+rt(1k)
+		display: none
+.comment-stats__go	
 	float: left
-.tasks__comment-counter
+.comment-stats__counter
 	float: right
 	
 
@@ -183,16 +252,22 @@
 	padding: 10px 15px 10px 70px
 	border-top: 1px solid $bg 
 	+clr
+	+rt(1k)
+		padding: 15px
 	.user-pic
 		position: absolute
 		top: 10px
 		left: 10px
 		margin: 0
+		+rt(1k)
+			display: none
 .add-comment__in	
 	padding-top: 5px
 .add-comment__form
 	position: relative
 	padding-right: 110px
+	+rt(1k)
+		padding: 0 0 40px 
 	.btn
 		position: absolute
 		top: 0
@@ -200,6 +275,11 @@
 		width: 110px
 		border-radius: 0 4px 4px 0
 		font-size: 11px	
+		+rt(1k)
+			top: 40px
+			left: 0
+			width: 100%
+			border-radius: 0 0 4px 4px
 .add-comment__field
 	position: relative
 	input
@@ -209,12 +289,16 @@
 		background: $bg
 		border-radius: 4px 0 0 4px 
 		font-size: 14px
+		+rt(1k)
+			border-radius: 4px 4px 0 0
 	&:after
 		content: ""
 		position: absolute
 		top: 14px
 		left: -6px
 		+arr(6,12,$bg,l)
+		+rt(1k)
+			display: none
 .add-comment__symbols
 	padding-top: 10px
 	font-style: italic
@@ -222,8 +306,12 @@
 	color: #aab2bd 
 
 
+.tabs
+	margin-bottom: 20px
 .tabs__nav
 	font-size: 0
+	+rt(1k)
+		display: none
 	button
 		width: 50%
 		height: 50px
@@ -294,6 +382,9 @@
 		border-bottom: 1px solid $bg 
 		&:last-child
 			border-radius: 0 0 4px 4px
+		&:first-child
+			+rt(1k)
+				border-radius: 4px 4px 0 0
 		&:hover
 			background: #FFF 
 
@@ -307,10 +398,22 @@
 		margin-bottom: 35px
 		vertical-align: top 
 		font-size: 12px
+		+rt(1k)
+			display: block
+			margin-bottom: 15px
+		&:last-child
+			+rt(1k)
+				margin: 0
 		&:nth-child(2n)
 			margin-left: 35px
+			+rt(1k)
+				margin-left: 0
 	.task__in	
 		width: 230px
+		+rt(1k)
+			width: 190px
+			img
+				width: 100%
 
 
 
@@ -359,10 +462,15 @@
 
 
 
-
+.my
+	margin-bottom: 20px
 .my__item
 	position: relative
 	margin-bottom: 20px 
+	+rt(1k)
+		margin-bottom: 10px
+		border-bottom: #CCD1D9 2px solid 
+		border-radius: 0 0 4px 4px
 	&.is-closed
 		.my__top	
 			padding: 15px
@@ -370,10 +478,15 @@
 .my__in
 	position: relative
 	width: 700px
+	+rt(1k)
+		width: auto
 .my__pic
-	img
-		display: block
-		border-radius: 4px 0 0 4px
+	height: 550px
+	border-radius: 4px 0 0 4px
+	+cover
+	+rt(1k)
+		height: 300px
+		border-radius: 4px 4px 0 0
 .my__top
 	position: absolute
 	top: 0
@@ -382,6 +495,8 @@
 	border-radius: 4px 0 0 0
 	padding: 15px 90px 15px 15px
 	+g(rgba(0,0,0,.7), rgba(0,0,0,0))
+	+rt(1k)
+		border-radius: 4px 4px 0 0
 .my__top-user
 	float: left
 	.user-pic, .my__title
@@ -423,6 +538,8 @@
 	border-bottom: #D4D8DE 2px solid 
 	background: #FFF 
 	+box
+	+rt(1k)
+		display: none
 	a
 		+med
 		color: #ED5565 
@@ -440,6 +557,8 @@
 	bottom: 0
 	right: 0
 	width: 300px
+	+rt(1k)
+		display: none
 	.btn
 		border: 2px solid $bl-b
 		border-width: 2px 0 0 0
@@ -453,10 +572,25 @@
 	width: 300px
 	background: #FFF 
 	overflow: auto
+	+rt(1k)
+		position: relative
+		top: 0
+		width: auto
+		border-radius: 0 0 4px 4px
+	.comment-stats, .add-comment, .no-fullscreen
+		display: none
+		+rt(1k)
+			display: block
+	.comment-stats
+		border-bottom: 1px solid $bg
 .my_popup
+	background: #FFF 
+	border-radius: 4px
+	margin: 0
 	.my__pic
-		img
-			border-radius: 0
+		border-radius: 4px 4px 0 0
+	.my__top
+		border-radius: 4px 4px 0 0
 	.my__in
 		width: auto
 	.my__comment-stats, .my__comments
@@ -465,13 +599,22 @@
 		right: auto
 		bottom: auto
 		width: auto
+	.my__comment-stats
+		display: block
+		border-radius: 0
 	.my__comment-wrap
 		+clr
 		.my__comment-stats, .btn
-			float: left
+			float: right
 			width: 50%
+			+rt(1)
+				float: none
+				width: 100%
 		.btn
 			font-size: 11px
+			+rt(1k)
+				height: 30px
+				line-height: 28px
 .no-fullscreen
 	padding: 10px 0
 	border-top: 1px solid $bg 
@@ -548,6 +691,8 @@
 	margin-bottom: 20px
 	.btn
 		border-radius: 0 0 4px 4px
+		+rt(1k)
+			font-size: 16px
 .tasks-empty__in
 	padding: 60px 60px 90px 
 	border-radius: 4px 4px 0 0
@@ -563,6 +708,7 @@
 .activity 
 	display: table
 	width: 100%
+	margin-bottom: 20px
 	background: #FFF
 	border-radius: 4px 
 .activity__item
@@ -571,6 +717,7 @@
 		.table__cell
 			border: none
 .activity__cell
+	position: relative
 	display: table-cell
 	height: 60px
 	padding: 15px
@@ -578,6 +725,8 @@
 	vertical-align: middle
 	&:first-child
 		width: 50px
+		+rt(1k)
+			display: none
 .activity__task
 	position: relative
 	width: 50px
@@ -595,6 +744,14 @@
 		border: 3px solid #fff
 .activity__time
 	text-align: right
+	+rt(1k)
+		position: absolute
+		top: 10px
+		right: 10px
+		white-space: nowrap
+		font-size: 11px
+		span
+			display: none
 .activity__user
 	position: relative
 	padding-left: 75px
@@ -618,20 +775,30 @@
 		border-radius: 0 0 4px 4px
 .new__name
 	margin-bottom: 20px
+	+rt(1k)
+		margin-bottom: 10px
 	input
 		width: 100%
-		height: 46px
+		height: 50px
 		padding: 0 18px
-		border: 2px solid #d3d7dd
+		border: 2px solid #a9b1bd
 		border-radius: 6px
 		background-color: #fff
-		box-shadow: inset 0 0 0 2px #a9b1bd
+		box-shadow: 0 0 0 2px #d3d7dd
 		font-size: 16px 
 		+placeholder-color($fc)
+		+box
 .new__layout
 	background: #f9f9fa 
 	border-radius: 4px 4px 0 0
 	+clr
+	+rt(1k)	
+		background: none 
+	.title
+		display: none
+		+rt(1k)
+			display: block
+			border-radius: 4px 4px 0 0
 .new__photo
 	float: left
 	width: 400px 
@@ -639,26 +806,46 @@
 	background: #656D78
 	border-radius: 4px 0 0 0
 	text-align: center
+	+rt(1k)
+		float: none
+		width: auto
+		margin-bottom: 10px
+		padding: 90px 0 0 0
+		border-radius: 0 0 4px 4px
 	.ico-camera
 		margin-bottom: 50px
+		+rt(1k)
+			margin-bottom: 90px
 .new__photo-text
 	margin-bottom: 40px
 	font-size: 14px
 	color: #fff 
+	+rt(1k)
+		display: none
 .new__photo-btns
 	width: 300px
 	margin: 0 auto 
+	+rt(1k)
+		width: auto
 	.btn
 		font-size: 11px
 	.btn_black	
 		border-radius: 4px 4px 0 0
+		+rt(1k)
+			border-radius: 0
 	.btn_fb
 		border-radius: 0 0 4px 4px
 .new__detail
 	float: left
 	width: 300px 
+	+rt(1k)
+		float: none
+		width: auto 
+		background: #fff 
 	.title
-		border-radius: 0 4px 0 0 
+		border-radius: 0 4px 0 0
+		+rt(1k)
+			border-radius: 4px 4px 0 0
 .new__detail-in
 	.field
 		padding: 15px 20px 
@@ -682,15 +869,24 @@
 .friends__value
 	margin-bottom: 20px
 	+clr
+	+rt(1k)
+		margin-bottom: 10px
 	.title, .btn
 		float: left
 		width: 50%
 	.btn
 		border-radius: 0 4px 4px 0
 		font-size: 11px
+		+rt(1k)
+			width: 100%
+			height: 40px
+			line-height: 40px
+			border-radius: 4px
 	.title
 		border-radius: 4px 0 0 4px
 		font-size: 16px
+		+rt(1k)
+			display: none
 .friends__list
 	margin-bottom: 20px
 	background: #FFF
@@ -700,6 +896,7 @@
 	padding: 15px
 	border-top: 1px solid $bg 
 	font-size: 0
+	white-space: nowrap
 	&:first-child
 		border: none
 	.user-pic
@@ -711,11 +908,16 @@
 	display: inline-block
 	vertical-align: middle
 	font-size: 12px
+	white-space: normal
 .friends__details
 	width: 290px
 	margin-right: 20px
+	+rt(1k)
+		width: 64%
 .friends__action
 	width: 230px
+	+rt(1k)
+		display: none
 	li
 		margin-top: 5px
 		&:first-child
@@ -743,12 +945,19 @@
 			background: rgb(0,0,0) 
 			background: rgba(0,0,0,.5) 
 			color: #FFF 
+		+rt(1k)
+			left: 0
+			right: 0
+			bottom: 37px
+			width: auto
+			margin: 0
+			z-index: 200 
 .friends__request
-	.friends__item
-		border-radius: 0 0 4px 4px
 	.title
 		padding: 0 15px 0 12px
 		border-radius: 4px 4px 0 0
+		+rt(1k)
+			display: none
 		i
 			position: relative
 			top: -2px
@@ -757,8 +966,11 @@
 			vertical-align: middle
 	.friends__item
 		background: #f9f9fa
+		border-radius: 0 0 4px 4px
 		&:hover
 			background: #fff 
+		+rt(1k)
+			background: #FFF 
 	.friends__details
 		width: 195px
 		margin: 0
@@ -772,6 +984,8 @@
 			&:first-child
 				margin-right: 25px 
 				font-weight: bold
+		+rt(1k)
+			display: block
 .friends__counter
 	position: absolute
 	top: 15px
@@ -784,6 +998,9 @@
 	text-align: center
 	line-height: 30px
 	font-size: 12px
+	+rt(1k)
+		top: 10px
+		right: 10px
 .friends_wide, .friends_wide-popup
 	.friends__value
 		.btn
@@ -840,13 +1057,22 @@
 	background: rgba(101,109,120,.9)
 	z-index: 2000 
 	overflow: auto
+	+rt(1k)
+		padding: 10px
 .popup_enter
 	padding: 100px 0
+	+rt(1k)
+		padding: 10px
 	.popup__in
 		width: 680px
+		+rt(1k)
+			width: auto
 .popup__in
 	width: 1000px
 	margin: 0 auto
+	border-radius: 4px
+	+rt(1k)
+		width: auto
 	  
 
 .ava, .setting
@@ -861,6 +1087,21 @@
 	.title
 		&:first-child
 			border-radius: 4px 4px 0 0
+	.field__label
+		+rt(1k)
+			display: none
+	.field__el, .select
+		+rt(1k)
+			width: 100%
+	.field__el
+		input
+			+placeholder-color($fc)
+			+placeholder
+				font-size: 0
+				color: $bg
+				+rt(1k)
+					font-size: 14px
+					color: $fc
 .ava__in
 	position: relative
 	padding: 30px
@@ -880,9 +1121,13 @@
 	padding: 25px 50px 95px
 	background: $gray
 	text-align: center
+	+rt(1k)
+		padding: 90px 0
 .ava__load-text
 	margin-bottom: 25px
 	color: #FFF 
+	+rt(1k)
+		display: none
 .ava__load
 	.btn
 		font-size: 11px
@@ -931,9 +1176,38 @@
 	font-size: 14px
 
 
-
-
-
+.tabs-nav
+	display: none
+	margin-bottom: 10px
+	font-size: 0
+	+rt(1k)
+		display: block
+	button
+		width: 50%
+		height: 40px
+		padding: 0 5px
+		border: 2px solid $gray 
+		border-width: 2px 2px 2px 0
+		border-radius: 0 4px 4px 0
+		+med
+		font-size: 9px
+		text-transform: uppercase
+		vertical-align: top
+		span
+			color: #ed5565 
+		&:first-child
+			border-width: 2px 0 2px 2px 
+			border-radius: 4px 0 0 4px
+		&.is-active
+			background: $gray 
+			color: #fff
+			span
+				color: #fff 
+.tabs-nav__three
+	button
+		width: 33.3%
+		&:nth-child(2)
+			border-radius: 0
 
 
 

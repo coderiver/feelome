@@ -52,9 +52,14 @@
 		@media only screen and (max-height: 700px) and (min-width: 1000px)
 			@content
 	@if $media == 1k
-		@media only screen and (max-width: 1000px)
+		@media only screen and (max-width: 1020px)
+			@content
+	@if $media == more1k
+		@media only screen and (min-width: 1020px)
 			@content
 
+*
+	//box-shadow: 0 0 0 1px red
 
 
 $bl: #4fc1e9
@@ -88,11 +93,18 @@ button
 	background: none 
 
 // common blocks
+.wrapper
+	min-width: 320px
+	+rt(1k)
+		padding-bottom: 27px
+		&.wrapper_landing
+			padding: 0
 .l-center
 	width: 1000px
 	margin: 0 auto
 	+rt(1k)
 		width: auto
+		padding: 0 10px
 
 .logo
 	float: left
@@ -187,64 +199,92 @@ button
 	height: 50px
 	padding-bottom: 90px
 	margin-bottom: 20px
+	+rt(1k)
+		padding-bottom: 49px
+		margin-bottom: 10px
 	.l-center
 		+clr
 	.logo
 		margin-right: 35px 
+		+rt(1k)
+			position: absolute
+			top: 0
+			left: 50%
+			margin: 0 0 0 -57px 
 	.links
 		margin-top: 15px
-	&.is-fixed
-		padding-bottom: 0px
-		z-index: 200 
-		.header__in
+		text-align: center
+		font-size: 0
+		+rt(1k)
 			position: fixed
-			top: 0
 			left: 0
 			right: 0
-		.nav
-			position: relative
-			left: auto
-			right: auto
-			top: auto
-			float: right
-			margin-left: 30px
-			border: none
-			.l-center
-				width: 400px
+			bottom: 0
+			margin: 0
+			padding: 10px
+			background: rgba(0,0,0,.8)
+			z-index: 200 
 			li
-				&.is-active
-					a
-						&:after
-							bottom: -1px
-			a
-				height: 50px
-				line-height: 50px
-			i
-				top: 8px
-				margin: 0
-			span
-				display: none
-			strong
-				position: absolute
-				top: 7px
-				right: 8px
-				width: 4px
-				height: 4px
-		.links
-			li
+				float: none
+				display: inline-block
 				margin-left: 25px
+				vertical-align: middle
+				font-size: 12px
 				&:first-child
 					margin: 0
-			span
-				display: none
-			i
-				margin: 0
-		.user
-			margin: 5px 0 0 10px
+	&.is-fixed
+		+rt(more1k)
+			padding-bottom: 0px
+			z-index: 200 
+			.header__in
+				position: fixed
+				top: 0
+				left: 0
+				right: 0
+			.nav
+				position: relative
+				left: auto
+				right: auto
+				top: auto
+				float: right
+				margin-left: 30px
+				border: none
+				.l-center
+					width: 400px
+				li
+					&.is-active
+						a
+							&:after
+								bottom: -1px
+				a
+					height: 50px
+					line-height: 50px
+				i
+					top: 8px
+					margin: 0
+				span
+					display: none
+				strong
+					position: absolute
+					top: 7px
+					right: 8px
+					width: 4px
+					height: 4px
+			.links
+				li
+					margin-left: 25px
+					&:first-child
+						margin: 0
+				span
+					display: none
+				i
+					margin: 0
+			.user
+				margin: 5px 0 0 10px
 .header__in
+	min-height: 50px
 	background: #FFF 	
 	border-bottom: 1px solid $bg 			
-
 
 .nav
 	position: absolute
@@ -302,6 +342,28 @@ button
 		text-align: center
 		color: #FFF 
 		overflow: hidden
+	+rt(1k)
+		.l-center
+			padding: 0
+		li
+			&.is-active
+				a
+					&:after
+						bottom: -1px
+		a
+			height: 50px
+			line-height: 50px
+		i
+			top: 8px
+			margin: 0
+		span
+			display: none
+		strong
+			position: absolute
+			top: 7px
+			right: 8px
+			width: 4px
+			height: 4px
 .nav__ico-1
 	+s(nav-ico1)
 .nav__ico-2
@@ -316,6 +378,9 @@ button
 	position: relative
 	float: right
 	margin: 5px 0 0 25px 
+	&:hover
+		.user__dropdown
+			display: block
 .user__head
 	cursor: pointer
 	font-size: 0
@@ -328,6 +393,7 @@ button
 		margin-left: 6px
 		+arr(10,6,#656d78,b)
 .user__dropdown
+	display: none
 	position: absolute
 	top: 50px
 	right: 0
@@ -351,7 +417,7 @@ button
 		vertical-align: middle
 		font-size: 12px
 .user__info, .profile__info
-	max-width: 160px
+	max-width: 155px
 .user__name, .profile__name
 	margin-bottom: 3px
 	font-size: 16px
@@ -419,6 +485,8 @@ button
 	float: left
 	width: 240px
 	margin-top: 10px
+	+rt(1k)
+		width: 30px
 	label
 		position: relative
 		display: block
@@ -429,11 +497,16 @@ button
 		background: $bg
 		border-radius: 15px  
 		+placeholder-color($fc)
+		+rt(1k)
+			width: 30px
+			padding: 0 0 0 30px
 	i
 		position: absolute
 		top: 7px
 		left: 10px
 		+s(search)
+		+rt(1k)
+			left: 8px
 
 
 
