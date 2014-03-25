@@ -13,49 +13,23 @@
 <body>
 <div class="wrapper">
 	<!-- header -->
-	<header class="header">
+	<header class="header header_no-login">
 		<div class="header__in">
 			<div class="l-center">
 				<a class="logo" href="#">feeloo.me</a>
 				<div class="search-form">
 					<label><input type="text" placeholder="Поиск"><i></i></label>
 				</div>
-				<div class="user">
-					<div class="user__head">
-						<img src="http://placehold.it/38x38" width="38" height="38" alt="">
-						<i class="user__arr"></i>
-					</div>
-					<div class="user__dropdown">
-						<div class="user__data">
-							<div class="user-pic user-pic_big">
-								<img src="http://placehold.it/90x90" width="90" height="90" alt="">
-								<span>15</span>
-							</div>
-							<div class="user__info">
-								<div class="user__name">Евгений Иванов</div>
-								<div class="user__city">Москва, Россия</div>
-							</div>
-						</div>
-						<ul class="user__stats">
-							<li><span>24</span>задания</li>
-							<li><span>34</span>друга</li>
-							<li><span>257</span>подписчиков</li>
-						</ul>
-						<div class="user__actions">
-							<a class="user__setting" href="#"><i></i><span>Настройки</span></a>
-							<a class="user__out" href="#"><i></i><span>Выход</span></a>
+				<!-- login -->
+				<div class="login">
+					<div class="login__table">
+						<div class="login__row">
+							<a class="login__enter" href="#">Войти</a>
+							<a class="login__reg btn" href="#">Зарегистрироваться</a>
+							<a class="login__fb btn btn_fb" href="#">или<i class="ico-fb"></i></a>
 						</div>
 					</div>
 				</div>
-				<!-- nav -->
-				<nav class="nav">
-					<ul class="l-center">
-						<li class="is-active"><a href="#"><i class="nav__ico-1"></i><span>Новости</span></a></li>
-						<li><a href="#"><i class="nav__ico-2"></i><span>Мои задания</span></a></li>
-						<li><a href="#"><i class="nav__ico-3"></i><span>Мои друзья</span><strong>15</strong></a></li>
-						<li><a href="#"><i class="nav__ico-4"></i><span>Активность</span><strong>24</strong></a></li>
-					</ul>
-				</nav>
 				<ul class="links">
 					<li><a href="#"><i class="links__ico-1"></i><span>О сайте</span></a></li>
 					<li><a href="#"><i class="links__ico-2"></i><span>Правила</span></a></li>
@@ -92,6 +66,51 @@
 					<div class="profile__action">
 						<button class="btn">Добавить АЛЕКСАНДРА в друзья</button>
 						<button class="btn btn_mod">ПОДПИСАТЬСЯ НА АЛЕКСАНДРА</button>
+					</div>
+				</div>
+				<!-- profile -->
+				<div class="profile">
+					<div class="profile__data">
+						<div class="user-pic user-pic_big">
+							<img src="http://placehold.it/90x90" width="90" height="90" alt="">
+						</div>
+						<div class="profile__info">
+							<div class="profile__name">Александр Ковальчук</div>
+							<div class="profile__city">Москва, Россия</div>
+						</div>
+					</div>
+					<ul class="profile__stats">
+						<li><a href="#"><span>24</span>задания</a></li>
+						<li><a href="#"><span>34</span>друга</a></li>
+						<li class="is-orange"><a href="#"><span>15</span>очков</a></li>
+					</ul>
+					<div class="profile__deactivation">
+						<span>Вы подписаны на Александра</span>
+						<a href="#">Отписаться</a>
+					</div>
+					<div class="profile__action">
+						<button class="btn btn_mod">Добавить АЛЕКСАНДРА в друзья</button>
+					</div>
+				</div>
+				<!-- profile -->
+				<div class="profile">
+					<div class="profile__data">
+						<div class="user-pic user-pic_big">
+							<img src="http://placehold.it/90x90" width="90" height="90" alt="">
+						</div>
+						<div class="profile__info">
+							<div class="profile__name">Александр Ковальчук</div>
+							<div class="profile__city">Москва, Россия</div>
+						</div>
+					</div>
+					<ul class="profile__stats">
+						<li><a href="#"><span>24</span>задания</a></li>
+						<li><a href="#"><span>34</span>друга</a></li>
+						<li class="is-orange"><a href="#"><span>15</span>очков</a></li>
+					</ul>
+					<div class="profile__deactivation">
+						<span>Александр у вас в друзьях</span>
+						<a href="#">Удалить из друзей</a>
 					</div>
 				</div>
 			</div>

@@ -497,29 +497,45 @@
 	+g(rgba(0,0,0,.7), rgba(0,0,0,0))
 	+rt(1k)
 		border-radius: 4px 4px 0 0
+		padding: 15px 50px 15px 15px 
 .my__top-user
 	float: left
 	.user-pic, .my__title
 		float: none
 		display: inline-block
 		vertical-align: middle
+	.user-pic
+		width: 50px
+		height: 50px
+		img
+			width: 100%
+			height: auto
 .my__winner
 	float: right
-	i, .user-pic, a
+	.ico-ribbon-white, .user-pic, .my__winner-user
 		display: inline-block
 		vertical-align: middle
-	i, a
+	.ico-ribbon-white, .my__winner-user
 		margin-right: 8px 
-	a
+	.ico-ribbon-white
+		+rt(1k)
+			margin: -5px -5px 0 0
+	.my__winner-user
 		+med
 		font-size: 14px
 		color: #FFF 
+		+rt(1k)
+			display: none
 	.user-pic
 		float: none
 		margin: 0
+		+rt(1k)
+			display: none
 .my__title
 	font-size: 16px
 	color: #FFF 
+	+rt(1k)
+		width: 160px
 .my__action
 	position: absolute
 	top: 15px
@@ -527,6 +543,11 @@
 	font-size: 0
 	button
 		margin-left: 20px
+	+rt(1k)
+		top: 10px
+		right: 10px
+		button
+			margin-left: 15px
 .my__comment-stats
 	position: absolute
 	top: 0
@@ -572,6 +593,13 @@
 	width: 300px
 	background: #FFF 
 	overflow: auto
+	&::-webkit-scrollbar
+		width: 5px
+	&::-webkit-scrollbar-thumb
+		background: $gray
+		border-radius: 3px
+	&::-webkit-scrollbar-track-piece
+		background: #fff
 	+rt(1k)
 		position: relative
 		top: 0
@@ -1010,6 +1038,8 @@
 	.friends__mark
 		&.is-fixed
 			width: 1000px
+			+rt(1k)
+				width: auto
 	.friends__list
 		font-size: 0
 	.friends__item
@@ -1029,9 +1059,16 @@
 	.friends__action
 		width: 160px
 .friends_wide-popup
+	.title
+		&:first-child
+			border-radius: 4px 4px 0 0
 	.friends__list
 		margin: 0
 		background: #F9F9FA 
+		border-radius: 0
+	.friends__list_mod
+		border-radius: 0 0 4px 4px
+		overflow: hidden
 	.title_mod
 		margin-top: -1px
 		border-top: 1px solid $bg
@@ -1043,6 +1080,7 @@
 	.friends__action_orange
 		a
 			color: $org 
+
 		
 
 
@@ -1146,9 +1184,15 @@
 		width: 50%
 	.title
 		border-radius: 4px 0 0 0
+		+rt(1k)
+			width: 22%
+			font-size: 11px
 	.btn
 		border-radius: 0 4px 0 0
 		font-size: 11px
+		+rt(1k)
+			width: 78%
+			padding: 0
 
 
 
