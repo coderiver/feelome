@@ -79,7 +79,7 @@ body
 	font-size: 12px 
 	line-height: 1.4
 	color: $fc
-	-webkit-font-smoothing: antialiased
+	//-webkit-font-smoothing: antialiased
 	&.no-scroll
 		overflow: hidden
 a
@@ -246,9 +246,11 @@ button
 	.login
 		margin-left: 30px
 	.links
+		position: relative
 		margin-top: 15px
 		text-align: center
 		font-size: 0
+		z-index: 4 
 		li
 			margin-left: 25px
 			font-size: 12px
@@ -439,7 +441,8 @@ button
 .user
 	position: relative
 	float: right
-	margin: 5px 0 0 25px 
+	margin: 5px 0 0 25px
+	z-index: 2 
 	&:hover
 		.user__dropdown
 			display: block
@@ -457,9 +460,12 @@ button
 .user__dropdown
 	display: none
 	position: absolute
-	top: 50px
+	top: 20px
 	right: 0
 	width: 300px
+	padding-top: 30px
+.user__dropdown-in
+	position: relative
 	background: #FFF
 	box-shadow: 0 10px 100px #656d77
 	border-radius: 4px 
