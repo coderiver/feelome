@@ -43,8 +43,8 @@
 =med
 	font-family: "GothamProMed", Arial, sans-serif 
 +font(KlinicslabBold, klinicslabbold)  
-=font
-	font-family: "KlinicslabBold", Arial, sans-serif 
+//=font
+//	font-family: "KlinicslabBold", Arial, sans-serif 
 	
 
 @mixin rt($media)
@@ -82,6 +82,8 @@ body
 	//-webkit-font-smoothing: antialiased
 	&.no-scroll
 		overflow: hidden
+		+rt(1k)
+			overflow: auto
 a
 	color: $link 
 	text-decoration: none
@@ -136,12 +138,9 @@ button
 
 .logo
 	float: left
-	height: 50px
-	+font
-	font-size: 30px
-	color: #656d78
-	line-height: 50px 
-	letter-spacing: -1px 
+	margin-top: 9px
+	+s(logo)
+	+hidetext
 	
 
 .logo-circle
