@@ -61,7 +61,6 @@
 *
 	//box-shadow: 0 0 0 1px red
 
-
 $bl: #4fc1e9
 $bl-b: #3f9aba
 $bld: #6c86bf
@@ -94,6 +93,15 @@ input, textarea, button
 	color: $fc 
 button
 	background: none 
+	
+.is-mob-version
+	display: none
+	+rt(1k)
+		display: block
+.is-desctop-version
+	display: block
+	+rt(1k)
+		display: none
 
 // common blocks
 .wrapper

@@ -35,6 +35,12 @@ input, textarea, button { font-family: "GothamProReg", Arial, sans-serif; -webki
 
 button { background: none; }
 
+.is-mob-version { display: none; }
+@media only screen and (max-width: 1020px) { .is-mob-version { display: block; } }
+
+.is-desctop-version { display: block; }
+@media only screen and (max-width: 1020px) { .is-desctop-version { display: none; } }
+
 .wrapper { min-width: 320px; }
 @media only screen and (max-width: 1020px) { .wrapper { padding-bottom: 27px; }
   .wrapper.wrapper_landing { padding: 0; } }
